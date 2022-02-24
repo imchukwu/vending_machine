@@ -1,9 +1,23 @@
-package com.cimspace.vending_machine.models;
+package com.cimspace.vending_machine.entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "\"user\"")
 public class User {
+    @Id
+    @Column(nullable = false, updatable = false)
     private String username;
+
+    @Column
     private String password;
+
+    @Column
     private int deposit;
+
     enum role {
         SELLER,
         BUYER
@@ -34,7 +48,7 @@ public class User {
         this.password = password;
     }
 
-    public int getDeposit() {
+    public double getDeposit() {
         return deposit;
     }
 

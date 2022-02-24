@@ -1,7 +1,6 @@
-package com.cimspace.vending_machine.models;
+package com.cimspace.vending_machine.entities;
 
 public class Product {
-
     private String productId;
     private int amountAvailable;
     private int cost;
